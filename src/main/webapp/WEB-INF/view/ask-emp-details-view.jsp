@@ -11,6 +11,10 @@
                placeholder="Write your name"/>
 
         <input type="submit"/>
+        <br>
+        <br>
+        <input type="text" name="age"
+               placeholder="Write your age"/>
     </form>
 </body>
 </html>

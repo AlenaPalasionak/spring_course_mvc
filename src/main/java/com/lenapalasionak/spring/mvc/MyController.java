@@ -35,10 +35,14 @@ public class MyController {
 //        return "show-emp-details-view";
 //    }
     @RequestMapping("/showDetails")
-    public String showEmpDedails(@RequestParam("employeeName") String empName, Model model) {
+    public String showEmpDedails(@RequestParam("employeeName") String empName
+            , @RequestParam("age") String age, Model model) {
 
-        empName = "Mrs " + empName;
+        empName = " Mrs " + empName+".";
         model.addAttribute("nameAttribute", empName);
+
+        age = " " + age +" years";
+        model.addAttribute("age", age);
 
         return "show-emp-details-view";
     }
