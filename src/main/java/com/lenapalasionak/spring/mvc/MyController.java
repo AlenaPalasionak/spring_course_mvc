@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
+@RequestMapping("/employee")
 public class MyController {
 
+    //чтобы вызвать нужно написать http://localhost:8080/employee/
     @RequestMapping("/")//При вводе в браузере слэша - будет выводиться возвр. view со именем first view
     // а там I wish you luck in Spring MVC learning
     public String showFirstView() {
@@ -17,25 +19,13 @@ public class MyController {
     }
 
     @RequestMapping("/askDetails")
-    public String askEmpDedails() {
+    public String askEmpDetails() {
         return "ask-emp-details-view";
     }
 
-    //    @RequestMapping("/showDetails")
-//    public String showEmpDedails() {
-//        return "show-emp-details-view";
-//    }
-//    @RequestMapping("/showDetails")
-//    public String showEmpDedails(HttpServletRequest request, Model model) {
-//
-//        String empName = request.getParameter("employeeName");
-//        empName = "Mrs " + empName;
-//        model.addAttribute("nameAttribute", empName);
-//
-//        return "show-emp-details-view";
-//    }
+
     @RequestMapping("/showDetails")
-    public String showEmpDedails(@RequestParam("employeeName") String empName
+    public String showEmpDetails(@RequestParam("employeeName") String empName
             , @RequestParam("age") String age, Model model) {
 
         empName = " Mrs " + empName+".";
