@@ -11,6 +11,7 @@ public class Employee {
     private String Department;
 
     private Map<String, String> departments;
+    private String carBrend;
 
     public Employee() {
         departments = new HashMap<>();
@@ -58,6 +59,14 @@ public class Employee {
 
     public void setDepartments(Map<String, String> departments) {
         this.departments = departments;
+    }
+
+    public String getCarBrend() {
+        return carBrend;
+    }
+
+    public void setCarBrend(String carBrend) {
+        this.carBrend = carBrend;
     }
 
     @Override

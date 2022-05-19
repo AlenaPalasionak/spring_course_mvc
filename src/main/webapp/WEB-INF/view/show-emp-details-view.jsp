@@ -17,7 +17,10 @@ Your salary: ${employee.salary}
 <br>
 
 Your department: ${employee.department}
-<br><br>
+<br>
+
+Your car: ${employee.carBrend}
+<br>
 
 <a href="/employee/">Back</a>
 
