@@ -1,16 +1,28 @@
 package com.lenapalasionak.spring.mvc;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Employee {
     private String name;
     private String surname;
     private int salary;
     private String Department;
+//
+//    private Map<String, String> deprtments;
+//
+//    public Employee() {
+//        deprtments = new HashMap<>();
+//        deprtments.put("IT", "Information Technology");
+//        deprtments.put("HR", "Human Resources");
+//        deprtments.put("Sales", "Sales");
+//    }
 
     public Employee() {
     }
 
-    public String getName() {
+        public String getName() {
         return name;
     }
 
