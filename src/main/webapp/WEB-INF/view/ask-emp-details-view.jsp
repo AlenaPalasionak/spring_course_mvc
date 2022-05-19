@@ -16,9 +16,7 @@
     Salary<form:input path="salary"/>
     <br><br>
     Department<form:select path="department">
-    <form:option value="Information technoligy" lable="IT"/>
-    <form:option value="Human Resources" lable="HR"/>
-    <form:option value="Sales" lable="Sales"/>
+    <form:options items="${employee.departments}"/>
 </form:select>
     <br><br>
 
