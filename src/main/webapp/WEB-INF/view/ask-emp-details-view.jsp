@@ -22,10 +22,15 @@
 
     Which car do you want?
     <br>
-    BMW <form:radiobutton path="carBrend" value="BMW"/>
-    Audi <form:radiobutton path="carBrend" value="Audi"/>
-    Mercedes-Benz <form:radiobutton path="carBrend" value="Mercedes-Benz"/>
 
+    <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
+    <br><br>
+
+    Foreign language(s):
+    <br>
+    EN <form:checkbox path="languages" value="English"/>
+    DE <form:checkbox path="languages" value="German"/>
+    FR <form:checkbox path="languages" value="French"/>
     <br><br>
     <input type="submit" value="OK">
 
