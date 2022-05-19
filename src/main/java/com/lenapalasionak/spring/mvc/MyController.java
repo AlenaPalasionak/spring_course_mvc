@@ -21,12 +21,13 @@ public class MyController {
 
     @RequestMapping("/askDetails")
     public String askEmpDetails(Model model) {
-        model.addAttribute("employee", new Employee());
+        model.addAttribute("employee", new Employee());//с этим атрибутом будет работать view
         return "ask-emp-details-view";
     }
 
     @RequestMapping("/showDetails")
-    public String showEmpDetails(@ModelAttribute("employee") Employee emp) {
+    public String showEmpDetails(@ModelAttribute("employee") Employee emp) {//view этого метода может использовать
+        // атрибут под названием employee. Из него и возьмет информацию
 
         return "show-emp-details-view";
     }

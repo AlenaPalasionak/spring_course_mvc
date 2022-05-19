@@ -12,6 +12,8 @@
         Your surname: ${employee.surname}
     <br>
     Your salary: ${employee.salary}
+        <br><br>
+    <a href="/employee/">Back</a>
 
     </body>
 </html>
