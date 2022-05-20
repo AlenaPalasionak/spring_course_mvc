@@ -32,6 +32,12 @@ Language(s):
     </li>
     </c:forEach>
 </ul>
+<br>
+Phone number: ${employee.phoneNumber}
+<br>
+
+Email: ${employee.email}
+<br><br>
 
 <a href="/employee/">Back</a>
 

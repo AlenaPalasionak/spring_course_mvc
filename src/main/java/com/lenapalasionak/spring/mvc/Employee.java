@@ -1,12 +1,18 @@
 package com.lenapalasionak.spring.mvc;
 
 
+import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Employee {
+    @Size(min=2, message="name must be min 2 symbols")
     private String name;
+    @NotEmpty(message="surname is required field")
+    @NotBlank(message="surname is required field")
     private String surname;
+    @Min(value=500, message = "must be greater than 499")
+    @Max(value=1000, message = "must be less than 1001")
     private int salary;
     private String Department;
     private Map<String, String> departments;
@@ -14,6 +20,11 @@ public class Employee {
     private Map<String, String> carBrands;
     private String [] languages;
     private Map<String, String> list;
+
+    @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "please use pattern xxx-xx-xx")
+    private String phoneNumber;
+
+    private String email;
 
     public Employee() {
         departments = new HashMap<>();
@@ -104,6 +115,22 @@ public class Employee {
 
     public void setList(Map<String, String> list) {
         this.list = list;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
