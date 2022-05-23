@@ -1,29 +1,32 @@
 package com.lenapalasionak.spring.mvc;
 
 
+import com.lenapalasionak.spring.mvc.validation.CheckEmail;
+
 import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Employee {
-    @Size(min=2, message="name must be min 2 symbols")
+    @Size(min = 2, message = "name must be min 2 symbols")
     private String name;
-    @NotEmpty(message="surname is required field")
-    @NotBlank(message="surname is required field")
+    @NotEmpty(message = "surname is required field")
+    @NotBlank(message = "surname is required field")
     private String surname;
-    @Min(value=500, message = "must be greater than 499")
-    @Max(value=1000, message = "must be less than 1001")
+    @Min(value = 500, message = "must be greater than 499")
+    @Max(value = 1000, message = "must be less than 1001")
     private int salary;
     private String Department;
     private Map<String, String> departments;
     private String carBrand;
     private Map<String, String> carBrands;
-    private String [] languages;
+    private String[] languages;
     private Map<String, String> list;
 
     @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "please use pattern xxx-xx-xx")
     private String phoneNumber;
 
+    @CheckEmail(value = "tut.by", message = "email must ends with tut.by")
     private String email;
 
     public Employee() {
@@ -44,8 +47,7 @@ public class Employee {
 
     }
 
-
-        public String getName() {
+    public String getName() {
         return name;
     }
 

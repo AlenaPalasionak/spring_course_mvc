@@ -32,12 +32,12 @@
     Foreign language(s):
     <br>
     <form:checkboxes path="languages" items="${employee.list}"/>
-    <br>
+    <br><br>
 
     Phone number:
     <form:input path="phoneNumber"/>
     <form:errors path="phoneNumber"/>
-    <br>
+    <br><br>
 
     Email:
     <form:input path="email"/>
